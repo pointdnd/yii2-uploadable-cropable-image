@@ -2,11 +2,11 @@ Yii2 uploadable and cropable image
 ==================================
 Yii2 расширение для загрузки и кропа изображений
 
-[![Latest Version](https://img.shields.io/github/release/maxmirazh33/yii2-uploadable-cropable-image.svg?style=flat-square)](https://github.com/maxmirazh33/yii2-uploadable-cropable-image/releases)
-[![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/maxmirazh33/yii2-uploadable-cropable-image/blob/master/LICENSE.md)
-[![Quality Score](https://img.shields.io/scrutinizer/g/maxmirazh33/yii2-uploadable-cropable-image.svg?style=flat-square)](https://scrutinizer-ci.com/g/maxmirazh33/yii2-uploadable-cropable-image)
-[![Code Climate](https://img.shields.io/codeclimate/github/maxmirazh33/yii2-uploadable-cropable-image.svg?style=flat-square)](https://codeclimate.com/github/maxmirazh33/yii2-uploadable-cropable-image)
-[![Total Downloads](https://img.shields.io/packagist/dt/maxmirazh33/yii2-uploadable-cropable-image.svg?style=flat-square)](https://packagist.org/packages/maxmirazh33/yii2-uploadable-cropable-image)
+[![Latest Version](https://img.shields.io/github/release/elgorm/yii2-uploadable-cropable-image.svg?style=flat-square)](https://github.com/elgorm/yii2-uploadable-cropable-image/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/elgorm/yii2-uploadable-cropable-image/blob/master/LICENSE.md)
+[![Quality Score](https://img.shields.io/scrutinizer/g/elgorm/yii2-uploadable-cropable-image.svg?style=flat-square)](https://scrutinizer-ci.com/g/elgorm/yii2-uploadable-cropable-image)
+[![Code Climate](https://img.shields.io/codeclimate/github/elgorm/yii2-uploadable-cropable-image.svg?style=flat-square)](https://codeclimate.com/github/elgorm/yii2-uploadable-cropable-image)
+[![Total Downloads](https://img.shields.io/packagist/dt/elgorm/yii2-uploadable-cropable-image.svg?style=flat-square)](https://packagist.org/packages/elgorm/yii2-uploadable-cropable-image)
 
 Установка
 ------------
@@ -16,13 +16,13 @@ Yii2 расширение для загрузки и кропа изображе
 Выполните в консоли
 
 ```
-php composer.phar require --prefer-dist maxmirazh33/yii2-uploadable-cropable-image "*"
+php composer.phar require --prefer-dist elgorm/yii2-uploadable-cropable-image "*"
 ```
 
 или добавьте
 
 ```
-"maxmirazh33/yii2-uploadable-cropable-image": "*"
+"elgorm/yii2-uploadable-cropable-image": "*"
 ```
 
 в секцию require вашего `composer.json` файла.
@@ -39,7 +39,7 @@ public function behaviors()
 {
     return [
         [
-            'class' => \maxmirazh33\image\Behavior::className(),
+            'class' => \elgorm\image\Behavior::className(),
             'savePathAlias' => '@web/images/',
             'urlPrefix' => '/images/',
             'crop' => true,
@@ -68,7 +68,7 @@ public function behaviors()
 
 В вашем файле вида с формой:
 ```php
-echo $form->field($model, 'avatar')->widget('maxmirazh33\image\Widget');
+echo $form->field($model, 'avatar')->widget('elgorm\image\Widget');
 ```
 
 Затем, в основном файле вида:
@@ -80,6 +80,6 @@ echo Html::img($model->getImageUrl('logo', 'mini')); //получим url мин
 Если вы используете Advanced App Template и это поведение находится в backend модели, то вы можете во frontend модель
 добавить трейт
 ```php
-use \maxmirazh33\image\GetImageUrlTrait
+use \elgorm\image\GetImageUrlTrait
 ```
 и использовать метод getImageUrl() и во frontend модели.

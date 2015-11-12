@@ -12,7 +12,7 @@
 
 use yii\bootstrap\Button;
 use yii\bootstrap\Modal;
-use yii\helpers\Html;
+use yii\bootstrap\Html;
 use yii\helpers\Json;
 
 ?>

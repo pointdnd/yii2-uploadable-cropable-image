@@ -13,6 +13,7 @@
 use yii\bootstrap\Button;
 use yii\bootstrap\Modal;
 use yii\bootstrap\Html;
+use kartik\file\FileInput;
 use yii\helpers\Json;
 
 ?>
@@ -43,11 +44,13 @@ use yii\helpers\Json;
             <span class="browse-text" id="<?= $selector ?>-name">
                 <?= Yii::t('elgorm/image', 'Select') ?>
             </span>
-            <?= Html::activeFileInput(
-                $model,
-                $attribute,
-                ['id' => $selector, 'onchange' => 'readFile(this, "' . $selector . '", ' . (int)$crop . ', ' . Json::encode($jcropSettings) . ')']
-            ) ?>
+            <?
+	            echo FileInput::widget([
+				    'model' => $model,
+				    'attribute' => $attribute,
+				    'options' => ['id' => $selector, 'onchange' => 'readFile(this, "' . $selector . '", ' . (int)$crop . ', ' . Json::encode($jcropSettings) . ')']
+				]);
+            ?>
         </div>
     </div>
     <?php if ($crop): ?>

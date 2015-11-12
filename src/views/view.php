@@ -38,18 +38,22 @@ use yii\helpers\Json;
 <?php endif; ?>
 
 <div id="field-<?= $selector ?>" class="form-group uploader">
-    <div class="btn btn-default fullinput">
+    <div class="fullinput">
         <div class="uploader-browse">
-            <span class="glyphicon glyphicon-picture"></span>
-            <span class="browse-text" id="<?= $selector ?>-name">
-                <?= Yii::t('elgorm/image', 'Select') ?>
-            </span>
             <?
-	            echo FileInput::widget([
-				    'model' => $model,
-				    'attribute' => $attribute,
-				    'options' => ['id' => $selector, 'onchange' => 'readFile(this, "' . $selector . '", ' . (int)$crop . ', ' . Json::encode($jcropSettings) . ')']
-				]);
+            echo FileInput::widget([
+                'model' => $model,
+                'attribute' => $attribute,
+                'options' => ['id' => $selector, 'onchange' => 'readFile(this, "' . $selector . '", ' . (int)$crop . ', ' . Json::encode($jcropSettings) . ')'],
+                'pluginOptions'=>[
+                    'showRemove'=>false,
+                    'uploadAsync'=>false,
+                    'showUpload'=>false,
+                    'showUploadedThumbs'=>false,
+                    'showPreview'=>false,
+                    'previewFileType'=>false,
+                ]
+            ]);
             ?>
         </div>
     </div>

@@ -1,5 +1,5 @@
 <?php
-namespace maxmirazh33\image;
+namespace elgorm\image;
 
 use yii\web\AssetBundle;
 
@@ -28,6 +28,6 @@ class JcropAsset extends AssetBundle
      * @inheritdoc
      */
     public $depends = [
-        'maxmirazh33\image\Asset',
+        'elgorm\image\Asset',
     ];
 }

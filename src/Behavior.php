@@ -1,5 +1,5 @@
 <?php
-namespace maxmirazh33\image;
+namespace elgorm\image;
 
 use Imagine\Image\Box;
 use Imagine\Image\Point;
@@ -21,7 +21,7 @@ use Yii;
  * {
  *     return [
  *         [
- *              'class' => \maxmirazh33\image\Behavior::className(),
+ *              'class' => \elgorm\image\Behavior::className(),
  *              'savePathAlias' => '@web/images/',
  *              'urlPrefix' => '/images/',
  *              'crop' => true,

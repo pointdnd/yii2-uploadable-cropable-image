@@ -1,5 +1,5 @@
 <?php
-namespace maxmirazh33\image;
+namespace elgorm\image;
 
 use yii\web\AssetBundle;
 
@@ -11,7 +11,7 @@ class CropAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@maxmirazh33/image/assets';
+    public $sourcePath = '@elgorm/image/assets';
     /**
      * @inheritdoc
      */
@@ -22,6 +22,6 @@ class CropAsset extends AssetBundle
      * @inheritdoc
      */
     public $depends = [
-        'maxmirazh33\image\JcropAsset',
+        'elgorm\image\JcropAsset',
     ];
 }

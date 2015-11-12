@@ -1,5 +1,5 @@
 <?php
-namespace maxmirazh33\image;
+namespace elgorm\image;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -81,12 +81,12 @@ class Widget extends InputWidget
      */
     public function registerTranslations()
     {
-        if (!isset(Yii::$app->i18n->translations['maxmirazh33/image']) && !isset(Yii::$app->i18n->translations['maxmirazh33/*'])) {
-            Yii::$app->i18n->translations['maxmirazh33/image'] = [
+        if (!isset(Yii::$app->i18n->translations['elgorm/image']) && !isset(Yii::$app->i18n->translations['maxmirazh33/*'])) {
+            Yii::$app->i18n->translations['elgorm/image'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@maxmirazh33/image/messages',
+                'basePath' => '@elgorm/image/messages',
                 'fileMap' => [
-                    'maxmirazh33/image' => 'image.php'
+                    'elgorm/image' => 'image.php'
                 ],
                 'forceTranslation' => true
             ];

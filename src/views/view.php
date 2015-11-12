@@ -21,7 +21,7 @@ use yii\helpers\Json;
     <?php Modal::begin([
         'id' => $selector . '-modal',
         'closeButton' => ['onclick' => 'destroyJcrop("' . $selector . '-image");', 'id' => $selector . '-image-close'],
-        'header' => '<h2>' . Yii::t('maxmirazh33/image', 'Crop image') . '</h2>',
+        'header' => '<h2>' . Yii::t('elgorm/image', 'Crop image') . '</h2>',
         'footer' => Button::widget([
             'label' => 'ОК',
             'options' => [
@@ -41,7 +41,7 @@ use yii\helpers\Json;
         <div class="uploader-browse">
             <span class="glyphicon glyphicon-picture"></span>
             <span class="browse-text" id="<?= $selector ?>-name">
-                <?= Yii::t('maxmirazh33/image', 'Select') ?>
+                <?= Yii::t('elgorm/image', 'Select') ?>
             </span>
             <?= Html::activeFileInput(
                 $model,

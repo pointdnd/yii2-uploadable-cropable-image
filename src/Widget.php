@@ -1,5 +1,5 @@
 <?php
-namespace elgorm\image;
+namespace pointdnd\image;
 
 use yii\base\InvalidConfigException;
 use yii\helpers\ArrayHelper;
@@ -13,7 +13,7 @@ use Yii;
  * Usage:
  * ```
  * ...
- * echo $form->field($model, 'image')->widget('maxmirazh33\image\Widget');
+ * echo $form->field($model, 'image')->widget('pointdnd\image\Widget');
  * ...
  * ```
  */
@@ -81,12 +81,12 @@ class Widget extends InputWidget
      */
     public function registerTranslations()
     {
-        if (!isset(Yii::$app->i18n->translations['elgorm/image']) && !isset(Yii::$app->i18n->translations['maxmirazh33/*'])) {
-            Yii::$app->i18n->translations['elgorm/image'] = [
+        if (!isset(Yii::$app->i18n->translations['pointdnd/image']) && !isset(Yii::$app->i18n->translations['pointdnd/*'])) {
+            Yii::$app->i18n->translations['pointdnd/image'] = [
                 'class' => 'yii\i18n\PhpMessageSource',
-                'basePath' => '@elgorm/image/messages',
+                'basePath' => '@pointdnd/image/messages',
                 'fileMap' => [
-                    'elgorm/image' => 'image.php'
+                    'pointdnd/image' => 'image.php'
                 ],
                 'forceTranslation' => true
             ];

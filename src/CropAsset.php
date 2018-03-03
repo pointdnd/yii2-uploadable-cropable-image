@@ -1,5 +1,5 @@
 <?php
-namespace elgorm\image;
+namespace pointdnd\image;
 
 use yii\web\AssetBundle;
 
@@ -11,7 +11,7 @@ class CropAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@elgorm/image/assets';
+    public $sourcePath = '@pointdnd/image/assets';
     /**
      * @inheritdoc
      */
@@ -22,6 +22,6 @@ class CropAsset extends AssetBundle
      * @inheritdoc
      */
     public $depends = [
-        'elgorm\image\JcropAsset',
+        'pointdnd\image\JcropAsset',
     ];
 }

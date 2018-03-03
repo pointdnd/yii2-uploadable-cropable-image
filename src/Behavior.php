@@ -1,5 +1,5 @@
 <?php
-namespace elgorm\image;
+namespace pointdnd\image;
 
 use Imagine\Image\Box;
 use Imagine\Image\Point;
@@ -21,7 +21,7 @@ use Yii;
  * {
  *     return [
  *         [
- *              'class' => \elgorm\image\Behavior::className(),
+ *              'class' => \pointdnd\image\Behavior::className(),
  *              'savePathAlias' => '@web/images/',
  *              'urlPrefix' => '/images/',
  *              'crop' => true,
@@ -54,14 +54,14 @@ class Behavior extends \yii\base\Behavior
      * @var array list of attribute as attributeName => options. Options:
      *  $width image width
      *  $height image height
-     *  $savePathAlias @see maxmirazh33\image\Behavior::$savePathAlias
-     *  $crop @see maxmirazh33\image\Behavior::$crop
-     *  $urlPrefix @see maxmirazh33\image\Behavior::$urlPrefix
+     *  $savePathAlias @see pointdnd\image\Behavior::$savePathAlias
+     *  $crop @see pointdnd\image\Behavior::$crop
+     *  $urlPrefix @see pointdnd\image\Behavior::$urlPrefix
      *  $thumbnails - array of thumbnails as prefix => options. Options:
      *          $width thumbnail width
      *          $height thumbnail height
-     *          $savePathAlias @see maxmirazh33\image\Behavior::$savePathAlias
-     *          $urlPrefix @see maxmirazh33\image\Behavior::$urlPrefix
+     *          $savePathAlias @see pointdnd\image\Behavior::$savePathAlias
+     *          $urlPrefix @see pointdnd\image\Behavior::$urlPrefix
      */
     public $attributes = [];
     /**
@@ -110,11 +110,14 @@ class Behavior extends \yii\base\Behavior
      */
     public function beforeSave()
     {
+
         /* @var $model ActiveRecord */
         $model = $this->owner;
         foreach ($this->attributes as $attr => $options) {
             $this->ensureAttribute($attr, $options);
+
             if ($file = UploadedFile::getInstance($model, $attr)) {
+
                 $this->createDirIfNotExists($attr);
                 if (!$model->isNewRecord) {
                     $this->deleteFiles($attr);

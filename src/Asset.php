@@ -1,5 +1,5 @@
 <?php
-namespace elgorm\image;
+namespace pointdnd\image;
 
 use yii\web\AssetBundle;
 
@@ -11,7 +11,7 @@ class Asset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@elgorm/image/assets';
+    public $sourcePath = '@pointdnd/image/assets';
     /**
      * @inheritdoc
      */

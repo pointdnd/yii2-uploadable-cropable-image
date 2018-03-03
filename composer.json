@@ -1,5 +1,5 @@
 {
-    "name": "elgorm/yii2-uploadable-cropable-image",
+    "name": "pointdnd/yii2-uploadable-cropable-image",
     "description": "Yii2 extension for upload and crop images",
     "type": "yii2-extension",
     "keywords": [
@@ -13,8 +13,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Elgorm",
-            "email": "elgorm@4ml.su"
+            "name": "point",
+            "email": "point.dnd@gmail.com"
         }
     ],
     "require": {
@@ -26,7 +26,7 @@
     },
     "autoload": {
         "psr-4": {
-            "elgorm\\image\\": "src"
+            "pointdnd\\image\\": "src"
         }
     },
     "extra": {
